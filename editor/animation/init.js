@@ -40,7 +40,7 @@ requirejs(['ext_editor_1', 'jquery_190', 'raphael_210'],
             }
 
             //YOUR FUNCTION NAME
-            var fname = 'checkio';
+            var fname = 'letter_queue';
 
             var checkioInput = data.in;
             var checkioInputStr = ' ' + fname + '(' + JSON.stringify(checkioInput)  + ')';
@@ -89,13 +89,33 @@ requirejs(['ext_editor_1', 'jquery_190', 'raphael_210'],
                 $content.find('.answer').remove();
             }
 
-            //Your code here about test explanation animation
-            //$content.find(".explanation").html("Something text for example");
-            //
-            //
-            //
-            //
-            //
+            var stack = [];
+            var s = 0;
+            var $table = $content.find(".explanation table");
+            for (var i = 0; i < checkioInput.length; i++) {
+                var $tr = $("<tr></tr>");
+                var c = checkioInput[i];
+
+                if (c.lastIndexOf("PUSH", 0) === 0) {
+                    var ch = c.split(" ")[1];
+                    stack.push(ch);
+                }
+                else if (c === "POP") {
+                    if (stack.length > 0) {
+                        s += Number(stack.pop());
+                    }
+                }
+                else {
+                    if (stack.length > 0) {
+                        s += Number(stack[stack.length - 1]);
+                    }
+                }
+
+                $tr.append($("<td></td>").text(c));
+                $tr.append($("<td></td>").text(stack.join(",")));
+                $tr.append($("<td></td>").text(s));
+                $table.append($tr);
+            }
 
 
             this_e.setAnimationHeight($content.height() + 60);
