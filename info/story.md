@@ -5,4 +5,4 @@ the collection are the addition of an entity to the collection (also known as pu
 removed. Often a peek, or top operation is also implemented, returning the value of the top element without removing
 it.
 
-Queues were not enough and we should expand our training with stacks.
+Queues alone are not enough to improve our robots functionality, so we will expand their training with stacks.
