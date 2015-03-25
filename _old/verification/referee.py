@@ -38,5 +38,5 @@ api.add_listener(
     ON_CONNECT,
     CheckiOReferee(
         tests=TESTS,
-        function_name="digit_stack"
+        DEFAULT_FUNCTION_NAME="digit_stack"
     ).on_ready)
