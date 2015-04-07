@@ -14,7 +14,7 @@ class Referee(RefereeCodeGolf):
     ENVIRONMENTS = settings_env.ENVIRONMENTS
 
     DEFAULT_FUNCTION_NAME = "golf"
-    DEFAULT_MAX_CODE_LENGTH = 200
+    DEFAULT_MAX_CODE_LENGTH = 250
     BASE_POINTS = 15
     ENV_COVERCODE = {
         "python_2": cover,
