@@ -4,7 +4,7 @@ from checkio_referee import RefereeCodeGolf, representations
 import settings_env
 from tests import TESTS
 
-cover = """def cover(func, data):
+cover = """def cover(f, data):
     return f(tuple(str(x) for x in data))
 """
 
