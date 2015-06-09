@@ -10,8 +10,9 @@ Initial value of the sum is 0 (zero).
 
 Let's look at an example, here’s the sequence of commands:<br>
 
-    ["PUSH 3", "POP", "POP", "PUSH 4", "PEEK", "PUSH 9", "PUSH 0", "PEEK", "POP", "PUSH 1", "PEEK"]
+`["PUSH 3", "POP", "POP", "PUSH 4", "PEEK", "PUSH 9", "PUSH 0", "PEEK", "POP", "PUSH 1", "PEEK"]`
 
+```
 | Command | Stack | Sum 
 |---------|-------|-----
 | PUSH 3  | 3     | 0
@@ -24,7 +25,8 @@ Let's look at an example, here’s the sequence of commands:<br>
 | PEEK    | 4,9,0 | 7+0
 | POP     | 4,9   | 7+0
 | PUSH 1  | 4,9,1 | 7
-| PEEK    | 4,9,1 | 7+1=**8**
+| PEEK    | 4,9,1 | 7+1=8
+```
 
 In this mission the main goal to make your code as short as possible.
 The shorter your code, the more points you earn.
