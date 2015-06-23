@@ -1,4 +1,4 @@
-from checkio_referee import RefereeCodeGolf, representations
+from checkio_referee import RefereeCodeGolf, representations, covercodes, ENV_NAME
 
 
 import settings_env
@@ -15,14 +15,14 @@ class Referee(RefereeCodeGolf):
 
     DEFAULT_FUNCTION_NAME = "golf"
     DEFAULT_MAX_CODE_LENGTH = 250
+    MAX_CODE_LENGTHS = {
+        ENV_NAME.JS_NODE: 220
+    }
+
     BASE_POINTS = 15
     ENV_COVERCODE = {
-        "python_2": cover,
-        "python_3": cover,
-        "javascript": None
+        ENV_NAME.PYTHON: covercodes.py_tuple
     }
     CALLED_REPRESENTATIONS = {
-        "python_2": representations.py_tuple_representation,
-        "python_3": representations.py_tuple_representation,
-        "javascript": None
+        ENV_NAME.PYTHON: representations.py_tuple_representation
     }
