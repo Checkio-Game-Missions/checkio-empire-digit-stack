@@ -6,7 +6,7 @@ We will emulate the stack process with Python. You are given a sequence of comma
 The stack can only contain digits.
 
 You should process all commands and sum all digits which were taken from the stack ("PEEK" or "POP").
-Initial value of the sum is 0 (zero).
+The initial value of the sum is 0 (zero).
 
 Let's look at an example, here’s the sequence of commands:<br>
 
