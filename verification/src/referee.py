@@ -15,9 +15,6 @@ class Referee(RefereeCodeGolf):
 
     DEFAULT_FUNCTION_NAME = "golf"
     DEFAULT_MAX_CODE_LENGTH = 250
-    MAX_CODE_LENGTHS = {
-        ENV_NAME.JS_NODE: 220
-    }
 
     BASE_POINTS = 15
     ENV_COVERCODE = {
